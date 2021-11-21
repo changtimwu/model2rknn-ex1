@@ -45,7 +45,7 @@ if __name__ == '__main__':
     print('done')
 
     print('--> Loading model with torch.load first')
-    model1 = torch.load(modelfn)
+    model1 = torch.load(modelfn, map_location=torch.device('cpu'))
     print('model1 is {}'.format(type(model1)))
 
     # Load pytorch model

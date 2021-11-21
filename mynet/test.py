@@ -44,8 +44,12 @@ if __name__ == '__main__':
     rknn.config(mean_values=[123.675, 116.28, 103.53], std_values=[58.395, 58.395, 58.395])
     print('done')
 
+    print('--> Loading model with torch.load first')
+    model1 = torch.load(modelfn)
+    print('model1 is {}'.format(type(model1)))
+
     # Load pytorch model
-    print('--> Loading model')
+    print('--> Loading model via rknn.load_pytorch')
     ret = rknn.load_pytorch(model=modelfn, input_size_list=input_size_list)
     if ret != 0:
         print('Load pytorch model failed!')

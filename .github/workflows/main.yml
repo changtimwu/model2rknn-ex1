@@ -6,7 +6,10 @@ jobs:
     name: run model quantization and verification
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2 
+      uses: actions/checkout@v2
+    - name: Validate model
+      run: |
+        md5sum mynet/*.pth.tar
     - name: launch the RKNN toolkit2 action
       id: rknntk
       uses: changtimwu/rknn-toolkit2-action@v1

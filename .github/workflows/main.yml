@@ -1,0 +1,20 @@
+on: [push,workflow_dispatch]
+
+jobs:
+  model_build_job:
+    runs-on: ubuntu-latest
+    name: run model quantization and verification
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2 
+    - name: launch the RKNN toolkit2 action
+      id: rknntk
+      uses: changtimwu/rknn-toolkit2-action@v1
+      with:
+        wkdir: 'mynet'
+    - name: Archive RKNN artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: rknn-model
+        path: |
+          mynet/*.rknn

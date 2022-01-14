@@ -145,11 +145,6 @@ if __name__ == '__main__':
     ret = rknn.load_rknn(f'./{mainfn}.rknn')
 
     # Set inputs
-    img_paths = [
-        os.path.join(".", "JPEGImages", "2007_000033.jpg"), 
-        os.path.join(".", "JPEGImages", "puppy.jpg"), 
-        os.path.join(".", "JPEGImages", "tower.jpg"), 
-    ]
     img_paths = []
     with open("dataset.txt", "r") as fin:
         for line in fin:

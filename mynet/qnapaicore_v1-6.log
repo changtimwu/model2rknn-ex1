@@ -1,0 +1,17 @@
+I Save log info to: ./qnapaicore_v1-6.log
+I _fold_constant remove nodes = ['Shape_173', 'Gather_175', 'Unsqueeze_176', 'Concat_177']
+I 
+I _fuse_ops results:
+I     fuse_bn_into_conv: remove node = ['BatchNormalization_1', 'BatchNormalization_5', 'BatchNormalization_8', 'BatchNormalization_11', 'BatchNormalization_17', 'BatchNormalization_20', 'BatchNormalization_23', 'BatchNormalization_27', 'BatchNormalization_30', 'BatchNormalization_33', 'BatchNormalization_37', 'BatchNormalization_40', 'BatchNormalization_43', 'BatchNormalization_49', 'BatchNormalization_52', 'BatchNormalization_55', 'BatchNormalization_59', 'BatchNormalization_62', 'BatchNormalization_65', 'BatchNormalization_69', 'BatchNormalization_72', 'BatchNormalization_75', 'BatchNormalization_79', 'BatchNormalization_82', 'BatchNormalization_85', 'BatchNormalization_91', 'BatchNormalization_94', 'BatchNormalization_97', 'BatchNormalization_101', 'BatchNormalization_104', 'BatchNormalization_107', 'BatchNormalization_111', 'BatchNormalization_114', 'BatchNormalization_117', 'BatchNormalization_121', 'BatchNormalization_124', 'BatchNormalization_127', 'BatchNormalization_131', 'BatchNormalization_134', 'BatchNormalization_137', 'BatchNormalization_141', 'BatchNormalization_144', 'BatchNormalization_147', 'BatchNormalization_153', 'BatchNormalization_156', 'BatchNormalization_159', 'BatchNormalization_163', 'BatchNormalization_166', 'BatchNormalization_169']
+I     convert_global_avgpool_to_conv: remove node = ['GlobalAveragePool_172'], add node = ['GlobalAveragePool_172_2conv']
+I     replace_gemm_by_conv: remove node = ['Reshape_178', 'Gemm_179'], add node = ['Gemm_179_2conv', 'Gemm_179_2conv_after']
+I     fuse_bn_into_conv: remove node = ['BatchNormalization_13', 'BatchNormalization_45', 'BatchNormalization_87', 'BatchNormalization_149']
+I 
+I sparse weight ...
+I sparse weight done.
+I 
+I rknn building ...
+I rknn buiding done
+[1;33mW[0m [1;33minit_runtime: target is None, use simulator![0m
+[1;33mW[0m [1;33minit_runtime: target is None, use simulator![0m
+[1;33mW[0m [1;33minit_runtime: target is None, use simulator![0m

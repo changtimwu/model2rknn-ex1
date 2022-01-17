@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Validate model
       run: |
-        md5sum mynet/*.pth.tar
+        md5sum mynet/*.onnx
     - name: launch the RKNN toolkit2 action
       id: rknntk
       uses: changtimwu/rknn-toolkit2-action@v1

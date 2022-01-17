@@ -83,7 +83,7 @@ docker logout
 
 docker login -u username registry:10443
 
-docker pull registry:10443/
+docker pull registry:10443/rknn:0.1.0-runtime
 ```
 
 Otherwise, it is easy to build a docker image from scratch, and run it.

@@ -81,10 +81,13 @@ def softmax(x):
 
 if __name__ == '__main__':
 
-    if len(sys.argv) < 1:
-        logging.warning("Usage: python3 test.py model_path")
-        sys.exit(1)
-    modelfn = sys.argv[1]
+    try:
+        if len(sys.argv) < 1:
+            logging.warning("Usage: python3 test.py model_path")
+            sys.exit(1)
+        modelfn = sys.argv[1]
+    except IndexError:
+        modelfn = 'qnapaicore_v1-6.onnx'
 
     assert os.path.exists(modelfn), \
         "The model file at {} was not found.".format(modelfn)
